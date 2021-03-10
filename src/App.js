@@ -24,7 +24,7 @@ function App() {
   return (
     <div className="App">
       {subdomain ? <Wrapper>
-        {/* global styles */}
+      {/* normalizing styles */}
         <NormaliseStyles />
         <BaseStyles />
         {/* {This is the content} */}
