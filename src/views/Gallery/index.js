@@ -1,6 +1,8 @@
 import Api from '../../utils/Api';
 import {useEffect, useState} from 'react';
 import SingleImage from '../../shared/components/SingleImage';
+import Wrapper from '../../shared/components/Wrapper'
+import { Title } from './Style';
 
 const Gallery = ({galleryId}) => {
   const [gallery, setGallery] = useState(); 
@@ -15,14 +17,14 @@ const Gallery = ({galleryId}) => {
   }, [galleryId])
 
 
-  return(<div>
+  return(<Wrapper>
       {gallery ? <div> 
-      <h1>{gallery.name}</h1>
-      {images.map((image) => {
-        return <SingleImage src={image.image_url}></SingleImage>
+      <Title>{gallery.name}</Title>
+      {images.map((image, index) => {
+        return <SingleImage key={index} src={image.image_url}></SingleImage>
       })}
       </div> : <div>Loading Gallery</div>} 
-  </div>)
+  </Wrapper>)
 }
 
 export default Gallery;
