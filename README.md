@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+<!-- 
+### Portfolio App routes
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### subdomain.introvaerts.com/  
+#### subdomian.introvaerts.com/about  
+#### subdomian.introvaerts.com/contact  
+#### subdomian.introvaerts.com/galleries/gallery_name  
+#### subdomian.introvaerts.com/galleries/gallery_name/image_id  
 
-## Available Scripts
+### Components:
+#### Navigation Bar
 
-In the project directory, you can run:
+### Views
+#### About
+#### contact
+#### gallery
+#### image 
+-->
 
-### `npm start`
+<!-- App.js we need
+- All information from Subdomain
+- Names and ids of galleries 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+60487bfca696095204ef991b subdomain
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+"_id": "60487c5da696095204ef991c",
+"name": "Photographs"
 
-### `npm test`
+  60487de10eb3050815a82195
+  60487e060eb3050815a82196
+  60487e0f0eb3050815a82197
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+"_id": "60487c71a696095204ef991d",
+"name": "Festival"
+  60487e1e0eb3050815a82198
+  60487e280eb3050815a82199 -->
