@@ -2,8 +2,9 @@ import styled from 'styled-components';
 
 export const IconContainer = styled.div`
   position: fixed;
-  top: 0.2rem;
-  right: 0.2rem;
+  top: 0.75rem;
+  right: 0.75rem;
+  text-wrap: wrap;
   z-index: 15;
 `;
 

@@ -3,7 +3,7 @@ import { colour, font } from './StyleConstants.js';
 
 export default createGlobalStyle`
   html {
-    font-size: 5vmax;
+    font-size: 4.5vmax;
     ${font.regular};  
   }
 
