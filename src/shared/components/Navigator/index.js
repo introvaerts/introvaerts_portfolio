@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { StyledLink, Menu } from './Styles';
 
 const Navigator = ({ userDetails, translate, clickHandler }) => {
