@@ -2,6 +2,7 @@ import { Switch, Route } from 'react-router-dom';
 import About from '../views/About';
 import Contact from '../views/Contact';
 import Gallery from '../views/Gallery';
+import Image from '../views/Image';
 
 const MainRouter = ({ userDetails }) => {
   const { galleries, subdomain } = userDetails;
@@ -24,6 +25,10 @@ const MainRouter = ({ userDetails }) => {
           </Route>
         );
       })}
+      <Route exact path={'/images/:id'}>
+        <Image />
+      </Route>
+
       <Route exact path="/contact">
         <Contact
           firstName={contact?.first_name}
