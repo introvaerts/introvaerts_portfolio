@@ -2,7 +2,6 @@ import NormaliseStyles from './shared/styles/NormaliseStyles';
 import BaseStyles from './shared/styles/BaseStyles';
 import { useEffect, useState } from 'react';
 import Api from './utils/Api';
-import { slide as Menu } from 'react-burger-menu';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 import Icon from './shared/components/Icon';
@@ -10,9 +9,6 @@ import Wrapper from './shared/components/Wrapper';
 import Navigator from './shared/components/Navigator';
 import MainRouter from './navigation/MainRouter';
 import Title from './shared/components/Title';
-
-
-const subdomainId = '60487bfca696095204ef991b';
 
 function App() {
   const [subdomain, setSubdomain] = useState();

@@ -1,5 +1,3 @@
-// import MainRouter from '../../../navigation/MainRouter';
-import Wrapper from '../../components/Wrapper';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 import { StyledLink, Menu } from './Styles';
 
