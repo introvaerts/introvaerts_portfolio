@@ -2,6 +2,7 @@ import Api from '../../utils/Api';
 import { useEffect, useState } from 'react';
 import SingleImage from '../../shared/components/SingleImage';
 import { Title, Wrapper } from './Style';
+import { Link } from 'react-router-dom';
 
 const Gallery = ({ galleryId }) => {
   const [gallery, setGallery] = useState();
@@ -23,7 +24,9 @@ const Gallery = ({ galleryId }) => {
           <Title>{gallery.name}</Title>
           {images.map((image, index) => {
             return (
-              <SingleImage key={index} src={image.image_url}></SingleImage>
+              <Link to={`/images/${image._id}`}>
+                <SingleImage key={index} src={image.image_url} />
+              </Link>
             );
           })}
         </div>
