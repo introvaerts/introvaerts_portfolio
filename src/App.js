@@ -13,9 +13,9 @@ import Title from './shared/components/Title';
 function App() {
   const [subdomain, setSubdomain] = useState();
   const [menuOpen, setMenuOpen] = useState(110);
-  const [menuPlus, setMenuPlus] = useState("yes")
+  const [menuPlus, setMenuPlus] = useState('yes');
 
-  const subdomainName = window.location.hostname.split(".")[0];
+  const subdomainName = window.location.hostname.split('.')[0];
   document.title = subdomainName[0].toUpperCase() + subdomainName.slice(1);
   useEffect(() => {
     Api.getInfo(subdomainName)
@@ -27,8 +27,8 @@ function App() {
 
   const handleOpen = () => {
     setMenuOpen(menuOpen === 110 ? 0 : 110);
-    setMenuPlus(menuPlus === "yes" ? "no" : "yes");
-  }
+    setMenuPlus(menuPlus === 'yes' ? 'no' : 'yes');
+  };
 
   return (
     <div className="App">
@@ -37,11 +37,15 @@ function App() {
           {/* normalizing styles */}
           <NormaliseStyles />
           <BaseStyles />
-          <Icon open={menuPlus} handleClick={handleOpen}/>
+          <Icon open={menuPlus} handleClick={handleOpen} />
           {/* {This is the content} */}
           <Title text={subdomain.subdomain.page_title} />
           <Router>
-            <Navigator userDetails={subdomain} translate={menuOpen} clickHandler={handleOpen}/>
+            <Navigator
+              userDetails={subdomain}
+              translate={menuOpen}
+              clickHandler={handleOpen}
+            />
             <MainRouter userDetails={subdomain} />
           </Router>
         </Wrapper>
