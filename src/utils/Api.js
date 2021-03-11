@@ -8,7 +8,10 @@ const Api = {
   },
   getGallery: galleryId => {
     return axios.get(`${baseUrl}galleries/${galleryId}`);
-  }
+  },
+  getImage: imageId => {
+    return axios.get(`${baseUrl}images/${imageId}`);
+  },
 };
 
 export default Api;
