@@ -6,6 +6,7 @@ import { Title, Wrapper } from './Style';
 const Gallery = ({ galleryId }) => {
   const [gallery, setGallery] = useState();
   const [images, setImages] = useState();
+
   useEffect(() => {
     Api.getGallery(galleryId)
       .then(res => {
