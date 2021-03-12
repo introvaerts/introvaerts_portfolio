@@ -1,8 +1,7 @@
 import Api from '../../utils/Api';
 import { useEffect, useState } from 'react';
-import SingleImage from '../../shared/components/SingleImage';
 import { Title, Wrapper } from './Style';
-import { Link } from 'react-router-dom';
+import ImageGrid from '../../shared/components/ImageGrid';
 
 const Gallery = ({ galleryId }) => {
   const [gallery, setGallery] = useState();
@@ -22,13 +21,7 @@ const Gallery = ({ galleryId }) => {
       {gallery ? (
         <div>
           <Title>{gallery.name}</Title>
-          {images.map((image, index) => {
-            return (
-              <Link to={`/images/${image._id}`}>
-                <SingleImage key={index} src={image.image_url} />
-              </Link>
-            );
-          })}
+          <ImageGrid images={gallery.images} />
         </div>
       ) : (
         <div>Loading Gallery</div>
