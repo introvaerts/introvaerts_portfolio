@@ -25,7 +25,7 @@ const MainRouter = ({ userDetails }) => {
           </Route>
         );
       })}
-      <Route exact path={'/images/:id'}>
+      <Route exact path={'/galleries/:name/:id'}>
         <Image />
       </Route>
 
