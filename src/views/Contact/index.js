@@ -1,5 +1,3 @@
-import Wrapper from '../../shared/components/Wrapper';
-
 const Contact = ({
   firstName,
   lastName,

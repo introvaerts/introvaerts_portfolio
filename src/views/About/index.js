@@ -1,4 +1,3 @@
-import { Wrapper } from './Style';
 import Image from '../../shared/components/SingleImage';
 
 const About = ({ pageTitle, tagLine, aboutImage, description }) => {

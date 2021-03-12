@@ -9,6 +9,9 @@ const Api = {
   getGallery: galleryId => {
     return axios.get(`${baseUrl}galleries/${galleryId}`);
   },
+  getGalleryByName: galleryName => {
+    return axios.get(`${baseUrl}galleries/names/${galleryName}`);
+  },
   getImage: imageId => {
     return axios.get(`${baseUrl}images/${imageId}`);
   },

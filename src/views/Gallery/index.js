@@ -24,7 +24,7 @@ const Gallery = ({ galleryId }) => {
           <Title>{gallery.name}</Title>
           {images.map((image, index) => {
             return (
-              <Link to={`/images/${image._id}`}>
+              <Link key={index} to={`/galleries/${gallery.name}/${image._id}`}>
                 <SingleImage key={index} src={image.image_url} />
               </Link>
             );
