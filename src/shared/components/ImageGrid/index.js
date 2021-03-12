@@ -8,10 +8,10 @@ export const ImageGrid = ({images}) => {
   return (
     <StyledGrid>
       {
-        images ? images.map((image) => {
+        images ? images.map((image, index) => {
           return (
-              <Link to={`/images/${image._id}`}>
-                <Thumbnail src={image.image_url} /> 
+              <Link key={index} to={`/galleries/${gallery.name}/${image._id}`}>
+                <Thumbnail key={index} src={image.image_url} /> 
               </Link>
             );
         }) 

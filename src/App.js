@@ -23,7 +23,7 @@ function App() {
         setSubdomain(res.data.data);
       })
       .catch(e => console.error(Error(e)));
-  }, []);
+  }, [subdomainName]);
 
   const handleOpen = () => {
     setMenuOpen(menuOpen === 110 ? 0 : 110);
