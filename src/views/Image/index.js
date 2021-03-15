@@ -17,22 +17,22 @@ const Image = () => {
   }, [id]);
 
   useEffect(() => {
-    const getShit = async () => {
-      const fuckingGallery = (await Api.getGalleryByName(name)).data.data;
-      const index = fuckingGallery.images.findIndex(image => image === id);
-      if (index === fuckingGallery.images.length - 1) {
-        setNextImage(fuckingGallery.images[0]);
-        setPrevImage(fuckingGallery.images[index - 1]);
+    const getGalleryInfo = async () => {
+      const thisGallery = (await Api.getGalleryByName(name)).data.data.gallery;
+      const index = thisGallery.images.findIndex(imageId => imageId === id);
+      if (index === thisGallery.images.length - 1) {
+        setNextImage(thisGallery.images[0]);
+        setPrevImage(thisGallery.images[index - 1]);
       } else if (index === 0) {
-        setPrevImage(fuckingGallery.images[fuckingGallery.images.length - 1]);
-        setNextImage(fuckingGallery.images[index + 1]);
+        setPrevImage(thisGallery.images[thisGallery.images.length - 1]);
+        setNextImage(thisGallery.images[index + 1]);
       } else {
-        setNextImage(fuckingGallery.images[index + 1]);
-        setPrevImage(fuckingGallery.images[index - 1]);
+        setNextImage(thisGallery.images[index + 1]);
+        setPrevImage(thisGallery.images[index - 1]);
       }
-      setGallery(fuckingGallery);
+      setGallery(thisGallery);
     };
-    getShit();
+    getGalleryInfo();
   }, [id]);
 
   return (
