@@ -2,9 +2,20 @@ import { StyledGrid } from './Styles';
 import { Link } from 'react-router-dom';
 
 import Thumbnail from '../Thumbnail';
+import { useEffect, useState } from 'react';
+import Api from '../../../utils/Api';
 
-export const ImageGrid = ({images}) => {
-  console.log(images)
+export const ImageGrid = ({gallery}) => {
+  
+  const [images, setImages] = useState();
+
+  useEffect(() => {
+    Api.getGalleryByName(gallery.name)
+       .then(res => {
+        setImages(res.data.data.images)})
+       .catch(e => console.log(e))
+  }, [])
+
   return (
     <StyledGrid>
       {

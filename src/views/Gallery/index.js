@@ -21,7 +21,7 @@ const Gallery = ({ galleryId }) => {
       {gallery ? (
         <div>
           <Title>{gallery.name}</Title>
-          <ImageGrid images={gallery.images} />
+          <ImageGrid gallery={gallery} />
         </div>
       ) : (
         <div>Loading Gallery</div>
