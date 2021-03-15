@@ -3,9 +3,11 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom'; 
 import { Title } from './Style';
 import ImageGrid from '../../shared/components/ImageGrid';
+import ViewContainer from '../../shared/components/ViewContainer';
+import SecondaryTitle from '../../shared/components/SecondaryTitle';
 
 
-const Gallery = () => {
+const Gallery = ({page_title}) => {
   const [gallery, setGallery] = useState();
   const { galleryId } = useParams();
 
@@ -19,14 +21,17 @@ const Gallery = () => {
 
   return (
     <>
-      {gallery ? (
-        <div>
-          <Title>{gallery.name}</Title>
-          <ImageGrid gallery={gallery} />
-        </div>
-      ) : (
-        <div>Loading Gallery</div>
-      )}
+      <SecondaryTitle text={page_title} />
+      <ViewContainer>
+        {gallery ? (
+          <div>
+            <h3>Gallery Title</h3>
+            <ImageGrid gallery={gallery} />
+          </div>
+        ) : (
+          <div>Loading Gallery</div>
+        )}
+      </ViewContainer>
     </>
   );
 };

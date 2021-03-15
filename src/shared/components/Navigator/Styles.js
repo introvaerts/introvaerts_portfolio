@@ -7,6 +7,8 @@ export const StyledLink = styled.h1`
   &:hover {
     color: ${colour.secondary};
   }
+  {/* Important for the options not to disappear */}
+  font-size: max(1rem, 45px);
 `;
 
 export const Menu = styled.div`

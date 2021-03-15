@@ -1,9 +1,11 @@
 import { useParams, Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import SingleImage from '../../shared/components/SingleImage';
+import { ImageView, ImageContainer, Controls, Label, Details, Description } from './Style';
+import ViewContainer from '../../shared/components/ViewContainer';
+import SecondaryTitle from '../../shared/components/SecondaryTitle';
 import Api from '../../utils/Api';
 
-const Image = () => {
+const Image = ({ page_title }) => {
   const { name, id } = useParams();
   const [image, setImage] = useState();
   const [gallery, setGallery] = useState();
@@ -39,17 +41,31 @@ const Image = () => {
 
 
   return (
-    <div>
-      <Link to={`/galleries/${name}`}>Back to {gallery?.name}</Link>
-      <SingleImage src={image?.image_url} />
-      <h3>
-        {image?.caption.title} {image?.caption.year} {image?.caption.media}{' '}
-        {image?.caption.dimensions}
-      </h3>
-      <p>{image?.description}</p>
-      <Link to={`/galleries/${name}/${prevImage}`}>previous</Link>
-      <Link to={`/galleries/${name}/${nextImage}`}>next</Link>
-    </div>
+    <>
+      <SecondaryTitle text={page_title} />
+      <ViewContainer>
+        <ImageContainer>
+          <ImageView src={image?.image_url} />
+          <Controls>
+            {/* <Link to={`/galleries/${name}`}>Back to {gallery?.name}</Link> */}
+            <Link to={`/galleries/${name}/${nextImage}`}>{`< prev`}</Link>
+            <Link to={`/galleries/${name}/${prevImage}`}>{`next >`}</Link>
+          </Controls>
+          <Description>
+            {image?.caption.title ? <><Label>Title:</Label><Details>{image.caption.title}</Details></> : null}
+            {image?.caption.title ? <><Label>Year:</Label><Details>{image.caption.year}</Details></> : null}
+            {image?.caption.title ? <><Label>Media:</Label><Details>{image.caption.media}</Details></> : null}
+            {image?.caption.title ? <><Label>Dimensions:</Label><Details>{image.caption.dimensions}</Details></> : null}
+          </Description>
+          {image?.caption.title ? 
+          <Description>
+            <Label>Description:</Label>
+            <p>{image?.description}</p>
+          </Description> : null }
+            
+        </ImageContainer>
+      </ViewContainer>
+    </>
   );
 };
 

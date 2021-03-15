@@ -39,7 +39,6 @@ function App() {
           <BaseStyles />
           <Icon open={menuPlus} handleClick={handleOpen} />
           {/* {This is the content} */}
-          <Title text={subdomain.subdomain.page_title} />
           <Router>
             <Navigator
               userDetails={subdomain}

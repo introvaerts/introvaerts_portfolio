@@ -3,6 +3,7 @@ import About from '../views/About';
 import Contact from '../views/Contact';
 import Gallery from '../views/Gallery';
 import Image from '../views/Image';
+import Title from '../shared/components/Title'
 
 const MainRouter = ({ userDetails }) => {
   const { subdomain } = userDetails;
@@ -10,7 +11,11 @@ const MainRouter = ({ userDetails }) => {
 
   return (
     <Switch>
+      <Route exact path="/">
+        <Title text={page_title} />
+      </Route>
       <Route exact path="/about">
+        
         <About
           pageTitle={page_title}
           tagLine={about?.tagline}
@@ -19,10 +24,10 @@ const MainRouter = ({ userDetails }) => {
         />
       </Route>
       <Route exact path={'/galleries/:galleryId'} >
-        <Gallery />
+        <Gallery page_title={page_title}/>
       </Route>
       <Route exact path={'/galleries/:name/:id'}>
-        <Image />
+        <Image page_title={page_title}/>
       </Route>
 
       <Route exact path="/contact">
@@ -33,6 +38,7 @@ const MainRouter = ({ userDetails }) => {
           address={contact?.address}
           phoneNumber={contact?.phone_number}
           businessEmail={contact?.business_email}
+          page_title={page_title}
         />
       </Route>
     </Switch>

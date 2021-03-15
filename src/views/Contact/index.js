@@ -1,3 +1,7 @@
+import ViewContainer from '../../shared/components/ViewContainer';
+import SecondaryTitle from '../../shared/components/SecondaryTitle';
+import {Label} from './Style';
+
 const Contact = ({
   firstName,
   lastName,
@@ -5,24 +9,30 @@ const Contact = ({
   address,
   phoneNumber,
   businessEmail,
+  page_title
 }) => {
   const { street_and_number, postalcode, city, country } = address;
   return (
     <>
-      <h6>{firstName}</h6>
-      <h6>{lastName}</h6>
-      {contactTagline ? <h6>{contactTagline}</h6> : null}
-      {address ? (
-        <div>
-          <h6>{street_and_number}</h6>
-          <h6>
-            {postalcode} {city}
-          </h6>
-          <h6>{country}</h6>
-        </div>
-      ) : null}
-      {phoneNumber ? <h6>{phoneNumber}</h6> : null}
-      {businessEmail ? <h6>{businessEmail}</h6> : null}
+      <SecondaryTitle text={page_title} />
+      <ViewContainer>
+        {contactTagline ? <h5>{contactTagline}</h5> : null}
+        <Label>Name:</Label>
+        <p>{firstName} {lastName}</p>
+        {address ? (
+
+          <div>
+            <Label>Address</Label>
+            <p>{street_and_number}</p>
+            <p>
+              {postalcode} {city}
+            </p>
+            <p>{country}</p>
+          </div>
+        ) : null}
+        {phoneNumber ? (<div><Label>Phone Number:</Label><p>{phoneNumber}</p></div>) : null}
+        {businessEmail ? (<div><Label>Email:</Label><p>{businessEmail}</p></div>) : null}
+      </ViewContainer>
     </>
   );
 };

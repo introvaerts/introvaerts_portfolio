@@ -4,14 +4,16 @@ import { colour } from '../../styles/StyleConstants';
 export const StyledTitle = styled.h4`
   ${'' /* margin-top: 0.2rem; */}
   color: ${colour.primary};
-  text-align: center;
+  text-align: left;
   margin: 0;
+  
 `;
 
 export const StyledContainer = styled.div`
-  display: flex;
-  width: 100%;
-  height: 90vh;
-  align-items: center;
-  justify-content: center;
+  height: 3rem;
+  width: 80vw;
+  position: fixed;
+  padding: 0.5rem;
+  top: 0;
+  left: 0;
 `
