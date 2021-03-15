@@ -20,7 +20,7 @@ const Image = () => {
 
   useEffect(() => {
     const getShit = async () => {
-      const fuckingGallery = (await Api.getGalleryByName(name)).data.data.gallery;
+      const fuckingGallery = (await Api.getGallery(name)).data.data.gallery;
       const index = fuckingGallery.images.findIndex(image => image === id);
       if (index === fuckingGallery.images.length - 1) {
         setNextImage(fuckingGallery.images[0]);
@@ -35,7 +35,7 @@ const Image = () => {
       setGallery(fuckingGallery);
     };
     getShit();
-  }, [id]);
+  }, [id, name]);
 
   return (
     <div>

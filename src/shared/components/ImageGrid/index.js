@@ -11,18 +11,18 @@ export const ImageGrid = ({gallery}) => {
   const [images, setImages] = useState();
 
   useEffect(() => {
-    Api.getGalleryByName(gallery.name)
+    Api.getGallery(gallery._id)
        .then(res => {
         setImages(res.data.data.images)})
        .catch(e => console.log(e))
-  }, [])
+  }, [gallery])
 
   return (
     <StyledGrid>
       {
         images ? images.map((image, index) => {
           return (
-              <Link key={index} className="images-link" to={`/galleries/${gallery.name}/${image._id}`}>
+              <Link key={index} className="images-link" to={`/galleries/${gallery._id}/${image._id}`}>
                 <Thumbnail key={index} src={image.image_url} /> 
               </Link>
             );

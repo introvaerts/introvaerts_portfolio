@@ -5,7 +5,7 @@ import Gallery from '../views/Gallery';
 import Image from '../views/Image';
 
 const MainRouter = ({ userDetails }) => {
-  const { galleries, subdomain } = userDetails;
+  const { subdomain } = userDetails;
   const { contact, about, page_title } = subdomain;
 
   return (
@@ -18,7 +18,7 @@ const MainRouter = ({ userDetails }) => {
           description={about?.description}
         />
       </Route>
-      <Route exact path={'/galleries/:galleryName'} >
+      <Route exact path={'/galleries/:galleryId'} >
         <Gallery />
       </Route>
       <Route exact path={'/galleries/:name/:id'}>

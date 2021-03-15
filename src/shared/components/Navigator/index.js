@@ -11,7 +11,7 @@ const Navigator = ({ userDetails, translate, clickHandler }) => {
       </Link>
       {galleries?.map((gallery, index) => {
         return (
-          <Link key={index} to={`/galleries/${gallery.name}`}>
+          <Link key={index} to={`/galleries/${gallery._id}`}>
             <StyledLink>{gallery.name}</StyledLink>
           </Link>
         );
