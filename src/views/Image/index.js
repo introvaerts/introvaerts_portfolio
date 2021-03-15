@@ -19,9 +19,9 @@ const Image = () => {
   }, [id]);
 
   useEffect(() => {
-    const getGalleryInfo = async () => {
-      const thisGallery = (await Api.getGalleryByName(name)).data.data.gallery;
-      const index = thisGallery.images.findIndex(imageId => imageId === id);
+    const getGallery = async () => {
+      const thisGallery = (await Api.getGallery(name)).data.data.gallery;
+      const index = thisGallery.images.findIndex(image => image === id);
       if (index === thisGallery.images.length - 1) {
         setNextImage(thisGallery.images[0]);
         setPrevImage(thisGallery.images[index - 1]);
@@ -34,8 +34,9 @@ const Image = () => {
       }
       setGallery(thisGallery);
     };
-    getGalleryInfo();
-  }, [id]);
+    getGallery();
+  }, [id, name]);
+
 
   return (
     <div>
