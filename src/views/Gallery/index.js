@@ -1,39 +1,35 @@
 import Api from '../../utils/Api';
 import { useEffect, useState } from 'react';
-import SingleImage from '../../shared/components/SingleImage';
+import { useParams } from 'react-router-dom'; 
 import { Title, Wrapper } from './Style';
-import { Link } from 'react-router-dom';
+import ImageGrid from '../../shared/components/ImageGrid';
+
 
 const Gallery = ({ galleryId }) => {
   const [gallery, setGallery] = useState();
   const [images, setImages] = useState();
+  const { galleryName } = useParams();
 
   useEffect(() => {
-    Api.getGallery(galleryId)
+    Api.getGalleryByName(galleryName)
       .then(res => {
         setImages(res.data.data.images);
         setGallery(res.data.data.gallery);
       })
       .catch(e => console.error(Error(e)));
-  }, [galleryId]);
+  }, [galleryName]);
 
   return (
-    <Wrapper>
+    <>
       {gallery ? (
         <div>
           <Title>{gallery.name}</Title>
-          {images.map((image, index) => {
-            return (
-              <Link key={index} to={`/galleries/${gallery.name}/${image._id}`}>
-                <SingleImage key={index} src={image.image_url} />
-              </Link>
-            );
-          })}
+          <ImageGrid gallery={gallery} />
         </div>
       ) : (
         <div>Loading Gallery</div>
       )}
-    </Wrapper>
+    </>
   );
 };
 
