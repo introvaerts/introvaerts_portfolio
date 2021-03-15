@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom'; 
 import { Title, Wrapper } from './Style';
 import ImageGrid from '../../shared/components/ImageGrid';
+import ViewContainer from '../../shared/components/ViewContainer';
 
 
 const Gallery = ({ galleryId }) => {
@@ -11,7 +12,7 @@ const Gallery = ({ galleryId }) => {
   const { galleryName } = useParams();
 
   useEffect(() => {
-    Api.getGalleryByName(galleryName)
+    Api.getGallery(galleryId)
       .then(res => {
         setImages(res.data.data.images);
         setGallery(res.data.data.gallery);
@@ -20,7 +21,7 @@ const Gallery = ({ galleryId }) => {
   }, [galleryName]);
 
   return (
-    <>
+    <ViewContainer>
       {gallery ? (
         <div>
           <Title>{gallery.name}</Title>
@@ -29,7 +30,7 @@ const Gallery = ({ galleryId }) => {
       ) : (
         <div>Loading Gallery</div>
       )}
-    </>
+    </ViewContainer>
   );
 };
 

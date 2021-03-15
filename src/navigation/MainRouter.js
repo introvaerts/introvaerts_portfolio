@@ -3,6 +3,7 @@ import About from '../views/About';
 import Contact from '../views/Contact';
 import Gallery from '../views/Gallery';
 import Image from '../views/Image';
+import Title from '../shared/components/Title'
 
 const MainRouter = ({ userDetails }) => {
   const { galleries, subdomain } = userDetails;
@@ -10,7 +11,11 @@ const MainRouter = ({ userDetails }) => {
 
   return (
     <Switch>
+      <Route exact path="/">
+        <Title text={page_title} />
+      </Route>
       <Route exact path="/about">
+        
         <About
           pageTitle={page_title}
           tagLine={about?.tagline}

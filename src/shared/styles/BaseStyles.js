@@ -3,14 +3,14 @@ import { colour, font } from './StyleConstants.js';
 
 export default createGlobalStyle`
   html {
-    font-size: 4.5vmax;
+    font-size: 4vmax;
     ${font.regular};  
   }
 
 
   h1 {
     ${font.regular};
-    ${font.size(1.4)};
+    ${font.size(1)};
     text-transform: uppercase;
     margin-bottom: 0rem;
   }
@@ -29,7 +29,7 @@ export default createGlobalStyle`
 
   h4 {
     ${font.brand};
-    ${font.size(1.4)};
+    ${font.size(1)};
     margin-bottom: 2rem;
     color: ${colour.reverse};
   }
