@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 export const ImageContainer = styled.div`
-  width: 30vw;
-  max-width: 200px;
-  height: 30vw;
-  max-height: 200px;
-  ${'' /* margin: 0.1rem 0.1rem; */}
+  width: 100%;
+  height: 100%;
+  &:hover {
+    opacity: 0.5;
+  }
 `;
 
 export const Image = styled.img`

@@ -1,23 +1,26 @@
 import Api from '../../utils/Api';
 import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom'; 
 import { Title, Wrapper } from './Style';
 import ImageGrid from '../../shared/components/ImageGrid';
+
 
 const Gallery = ({ galleryId }) => {
   const [gallery, setGallery] = useState();
   const [images, setImages] = useState();
+  const { galleryName } = useParams();
 
   useEffect(() => {
-    Api.getGallery(galleryId)
+    Api.getGalleryByName(galleryName)
       .then(res => {
         setImages(res.data.data.images);
         setGallery(res.data.data.gallery);
       })
       .catch(e => console.error(Error(e)));
-  }, [galleryId]);
+  }, [galleryName]);
 
   return (
-    <Wrapper>
+    <>
       {gallery ? (
         <div>
           <Title>{gallery.name}</Title>
@@ -26,7 +29,7 @@ const Gallery = ({ galleryId }) => {
       ) : (
         <div>Loading Gallery</div>
       )}
-    </Wrapper>
+    </>
   );
 };
 

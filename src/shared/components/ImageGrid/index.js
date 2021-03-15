@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import Thumbnail from '../Thumbnail';
 import { useEffect, useState } from 'react';
 import Api from '../../../utils/Api';
+import "./Style.css"
 
 export const ImageGrid = ({gallery}) => {
   
@@ -21,7 +22,7 @@ export const ImageGrid = ({gallery}) => {
       {
         images ? images.map((image, index) => {
           return (
-              <Link key={index} to={`/galleries/${gallery.name}/${image._id}`}>
+              <Link key={index} className="images-link" to={`/galleries/${gallery.name}/${image._id}`}>
                 <Thumbnail key={index} src={image.image_url} /> 
               </Link>
             );

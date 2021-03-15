@@ -18,13 +18,16 @@ const MainRouter = ({ userDetails }) => {
           description={about?.description}
         />
       </Route>
-      {galleries?.map((gallery, index) => {
+      <Route exact path={'/galleries/:galleryName'} >
+        <Gallery />
+      </Route>
+      {/* {galleries?.map((gallery, index) => {
         return (
           <Route exact key={index} path={`/galleries/${gallery.name}`}>
             <Gallery key={index} galleryId={gallery._id} />
           </Route>
         );
-      })}
+      })} */}
       <Route exact path={'/galleries/:name/:id'}>
         <Image />
       </Route>
