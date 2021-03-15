@@ -6,6 +6,7 @@ export const StyledTitle = styled.h4`
   color: ${colour.primary};
   text-align: left;
   margin: 0;
+  
 `;
 
 export const StyledContainer = styled.div`

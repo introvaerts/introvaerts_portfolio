@@ -24,10 +24,10 @@ const MainRouter = ({ userDetails }) => {
         />
       </Route>
       <Route exact path={'/galleries/:galleryId'} >
-        <Gallery />
+        <Gallery page_title={page_title}/>
       </Route>
       <Route exact path={'/galleries/:name/:id'}>
-        <Image />
+        <Image page_title={page_title}/>
       </Route>
 
       <Route exact path="/contact">
@@ -38,6 +38,7 @@ const MainRouter = ({ userDetails }) => {
           address={contact?.address}
           phoneNumber={contact?.phone_number}
           businessEmail={contact?.business_email}
+          page_title={page_title}
         />
       </Route>
     </Switch>

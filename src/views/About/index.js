@@ -7,7 +7,7 @@ const About = ({ pageTitle, tagLine, aboutImage, description }) => {
     <>
       <SecondaryTitle text={pageTitle}/>
       <ViewContainer>
-        {tagLine ? <h6>{tagLine}</h6> : null}
+        {tagLine ? <h3>{tagLine}</h3> : null}
         {aboutImage ? <Image src={aboutImage} /> : null}
         {description ? <p>{description}</p> : null}
       </ViewContainer>
