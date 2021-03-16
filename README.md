@@ -37,7 +37,7 @@ Create a unique portfolio with your own subdomain. The portfolio can host up to 
 
 ### Portfolio Components:
 
-- Views & Components:
+ Views & Components:
   ![introvÆrts_wireframe_portfolio_web](https://user-images.githubusercontent.com/74352389/110110003-7d9aa380-7dae-11eb-996f-a546abcfab8c.png)
 
 #### Navigation Bar
