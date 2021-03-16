@@ -25,7 +25,7 @@ const Gallery = ({page_title}) => {
       <ViewContainer>
         {gallery ? (
           <div>
-            <h3>Gallery Title</h3>
+            <h3>{gallery?.name}</h3>
             <ImageGrid gallery={gallery} />
           </div>
         ) : (

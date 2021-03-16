@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colour } from '../../shared/styles/StyleConstants';
+import { colour, font } from '../../shared/styles/StyleConstants';
 
 
 
@@ -22,20 +22,20 @@ export const ImageContainer = styled.div`
   }
 
   p {
-    font-size: minmax(12px, 0.3rem);
-    margin-left: 0.5rem;
+    font-size: max(20px, 0.4rem);
   }
 `
 
 export const Controls = styled.div`
-  width: calc( 99vw - 1rem );
+  width: calc( 98vw - 1rem );
   display: flex;
   justify-content: space-between;
+  margin-top: 0.5rem;
 `
 
 export const Description = styled.div`
   margin-top: 1rem;
-  width: calc( 99vw - 1rem );
+  width: calc( 98vw - 1rem );
   display: flex;
   flex-wrap: wrap
 `
@@ -43,12 +43,12 @@ export const Description = styled.div`
 export const Label = styled.h6`
   font-size: 0.4rem;
   color: ${colour.secondary};
-  margin-left: 0.5rem;
   margin-right: 0.1rem;
 `;
 
 export const Details = styled.h3`
   margin: 0;
+  margin-right: 0.5rem;
   text-align: left;
   font-size: 0.4rem;
 `

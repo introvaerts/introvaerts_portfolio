@@ -6,12 +6,12 @@ export const StyledTitle = styled.h4`
   color: ${colour.primary};
   text-align: left;
   margin: 0;
-  
 `;
 
 export const StyledContainer = styled.div`
+  background-color: ${colour.background1};
   height: 3rem;
-  width: 80vw;
+  width: 100vw;
   position: fixed;
   padding: 0.5rem;
   top: 0;
