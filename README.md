@@ -3,11 +3,10 @@
 ### Table of Contents
 
 - [Description](#Description)
-- [Portfolio](#Core-functionalities)
+- [Core functionalities](#Core-functionalities)
 - [Portfolio Routes](#Portfolio-Routes)
 - [Portfolio Components](#components)
-- [Tools](#tools)
-- [Wireframe](#wireframe)
+- [Navigation Bar](#Navigation-Bar)
 - [Mobile Mockup](#Mobile-Mockup)
 
 ### Description
