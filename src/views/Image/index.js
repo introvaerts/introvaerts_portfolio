@@ -39,7 +39,6 @@ const Image = ({ page_title }) => {
     getGallery();
   }, [id, name]);
 
-  console.log(image)
   return (
     <>
       <SecondaryTitle text={page_title} />
