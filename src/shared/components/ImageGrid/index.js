@@ -23,7 +23,7 @@ export const ImageGrid = ({gallery}) => {
         images ? images.map((image, index) => {
           return (
               <Link key={index} className="images-link" to={`/galleries/${gallery._id}/${image._id}`}>
-                <Thumbnail key={index} src={image.image_url} /> 
+                <Thumbnail key={index} src={image.image_url} alt={image.alt_text} /> 
               </Link>
             );
         }) 
