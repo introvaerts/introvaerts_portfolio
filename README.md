@@ -3,7 +3,7 @@
 ### Table of Contents
 
 - [Description](#Description)
-- [Portfolio](#Portfolio)
+- [Portfolio](#Core-functionalities)
 - [Portfolio Routes](#Portfolio-Routes)
 - [Portfolio Components](#components)
 - [Tools](#tools)
