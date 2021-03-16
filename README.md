@@ -12,12 +12,13 @@
 
 ### Description
 
-Create a unique portfolio under a subdomain with your own chosen name. Portfolio can host up to 3 different Galeries, an About and Contact page.
+Create a unique portfolio with your own subdomain. The portfolio can host up to 3 different Galeries, an About and Contact page.
 
 ### Core functionalities:
 
 - Create Portfolio
 - Create Gallery
+- Choose Typography & Colour
 - Preview Image
 - Add Caption & Description
 - Delete Image
