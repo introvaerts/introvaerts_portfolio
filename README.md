@@ -8,7 +8,7 @@
 - [Portfolio Components](#components)
 - [Tools](#tools)
 - [Wireframe](#wireframe)
-- [Mockup](#Mockup)
+- [Mobile Mockup](#Mobile-Mockup)
 
 ### Description
 
@@ -47,6 +47,11 @@ Create a unique portfolio with your own subdomain. The portfolio can host up to 
 - Contact
 - Gallery
 - Image
+
+### Mobile Mockup 
+![Screenshot 2021-03-16 at 16 43 17](https://user-images.githubusercontent.com/74352389/111338681-6776c800-8677-11eb-835e-8da50cfbaf04.png)
+![Screenshot 2021-03-16 at 16 45 36](https://user-images.githubusercontent.com/74352389/111338831-8d9c6800-8677-11eb-83ef-f164dc3834cf.png)
+
 
 <!-- App.js we need
 - All information from Subdomain
