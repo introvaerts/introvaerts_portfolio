@@ -49,7 +49,9 @@ Create a unique portfolio with your own subdomain. The portfolio can host up to 
 - Image
 
 ### Mobile Mockup 
-![Screenshot 2021-03-16 at 16 43 17](https://user-images.githubusercontent.com/74352389/111339259-e966f100-8677-11eb-8a66-e32282e9c3fe.png)
+
+![Screenshot 2021-03-16 at 17 00 08](https://user-images.githubusercontent.com/74352389/111340688-28497680-8679-11eb-98e3-9155e13540e2.png)
+
 ![Screenshot 2021-03-16 at 16 55 43](https://user-images.githubusercontent.com/74352389/111340447-ed474300-8678-11eb-872e-272968ab28ed.png)
 
 
