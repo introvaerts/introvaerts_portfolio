@@ -1,10 +1,14 @@
 import styled from 'styled-components';
 
 export const ImageContainer = styled.div`
-  width: 100%;
+  width: calc( 98vw - 1rem);
+  height: 45vh;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
 `;
 
 export const Image = styled.img`
-  width: 100%;
-  height: auto;
+  object-fit: cover;
+  width: calc(98vw - 1rem);
 `;
