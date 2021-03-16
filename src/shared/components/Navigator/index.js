@@ -6,6 +6,9 @@ const Navigator = ({ userDetails, translate, clickHandler }) => {
 
   return (
     <Menu translate={translate} onClick={clickHandler}>
+      <Link to="/">
+        <StyledLink>Home</StyledLink>
+      </Link>
       <Link to="/about">
         <StyledLink>About</StyledLink>
       </Link>
