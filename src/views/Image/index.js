@@ -39,13 +39,12 @@ const Image = ({ page_title }) => {
     getGallery();
   }, [id, name]);
 
-
   return (
     <>
       <SecondaryTitle text={page_title} />
       <ViewContainer>
         <ImageContainer>
-          <ImageView src={image?.image_url} />
+          <ImageView src={image?.image_url} alt={image?.alt_text} />
           <Controls>
             {/* <Link to={`/galleries/${name}`}>Back to {gallery?.name}</Link> */}
             <Link to={`/galleries/${name}/${nextImage}`}>{`< prev`}</Link>
