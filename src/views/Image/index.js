@@ -51,12 +51,12 @@ const Image = ({ page_title }) => {
             <Link to={`/galleries/${name}/${prevImage}`}>{`next >`}</Link>
           </Controls>
           <Description>
-            {image?.caption.title ? <><Label>Title:</Label><Details>{image.caption.title}</Details></> : null}
-            {image?.caption.title ? <><Label>Year:</Label><Details>{image.caption.year}</Details></> : null}
-            {image?.caption.title ? <><Label>Media:</Label><Details>{image.caption.media}</Details></> : null}
-            {image?.caption.title ? <><Label>Dimensions:</Label><Details>{image.caption.dimensions}</Details></> : null}
+            {image?.caption?.title ? <><Label>Title:</Label><Details>{image.caption.title}</Details></> : null}
+            {image?.caption?.year ? <><Label>Year:</Label><Details>{image.caption.year}</Details></> : null}
+            {image?.caption?.media ? <><Label>Media:</Label><Details>{image.caption.media}</Details></> : null}
+            {image?.caption?.dimensions ? <><Label>Dimensions:</Label><Details>{image.caption.dimensions}</Details></> : null}
           </Description>
-          {image?.caption.title ? 
+          {image?.description ? 
           <Description>
             <Label>Description:</Label>
             <p>{image?.description}</p>
