@@ -1,6 +1,6 @@
 import ViewContainer from '../../shared/components/ViewContainer';
 import SecondaryTitle from '../../shared/components/SecondaryTitle';
-import {Label} from './Style';
+import { Label } from './Style';
 
 const Contact = ({
   firstName,
@@ -9,18 +9,19 @@ const Contact = ({
   address,
   phoneNumber,
   businessEmail,
-  page_title
+  page_title,
 }) => {
   const { street_and_number, postalcode, city, country } = address;
   return (
     <>
       <SecondaryTitle text={page_title} />
       <ViewContainer>
-        {contactTagline ? <h5>{contactTagline}</h5> : null}
+        {contactTagline ? <h3>{contactTagline}</h3> : null}
         <Label>Name:</Label>
-        <p>{firstName} {lastName}</p>
+        <p>
+          {firstName} {lastName}
+        </p>
         {address ? (
-
           <div>
             <Label>Address</Label>
             <p>{street_and_number}</p>
@@ -30,8 +31,18 @@ const Contact = ({
             <p>{country}</p>
           </div>
         ) : null}
-        {phoneNumber ? (<div><Label>Phone Number:</Label><p>{phoneNumber}</p></div>) : null}
-        {businessEmail ? (<div><Label>Email:</Label><p>{businessEmail}</p></div>) : null}
+        {phoneNumber ? (
+          <div>
+            <Label>Phone Number:</Label>
+            <p>{phoneNumber}</p>
+          </div>
+        ) : null}
+        {businessEmail ? (
+          <div>
+            <Label>Email:</Label>
+            <p>{businessEmail}</p>
+          </div>
+        ) : null}
       </ViewContainer>
     </>
   );

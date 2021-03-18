@@ -2,7 +2,9 @@ import styled from 'styled-components';
 import { colour } from '../../styles/StyleConstants';
 
 export const StyledContainer = styled.div`
-  width: 98vw;
+  ${'' /* width: 98vw; */}
+  position: relative;
+  max-width: 2000px;
   min-height: 100vh;
   padding: 0.5rem;
   margin: 0 auto;
