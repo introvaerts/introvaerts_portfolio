@@ -39,7 +39,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1.3;
+	line-height: 1.2;
 
 }
 ol, ul {

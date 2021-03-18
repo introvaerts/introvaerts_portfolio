@@ -8,11 +8,15 @@ export const ImageContainer = styled.div`
   justify-content: center;
   margin-bottom: 1rem; */
   }
-  max-width: 30vw;
-  margin: 0 auto;
+  ${'' /* max-width: 30vw;
+  margin: 0 auto; */}
+  width: 100%;
+  margin: 2rem auto;
+  height: 45vh;
+  text-align: center;
 `;
 
 export const Image = styled.img`
   object-fit: cover;
-  width: 100%;
+  height: 100%;
 `;

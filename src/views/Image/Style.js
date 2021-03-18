@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 import { colour, font } from '../../shared/styles/StyleConstants';
 
-
-
 export const ImageView = styled.img`
   object-fit: cover;
   height: 45vh;
@@ -10,9 +8,10 @@ export const ImageView = styled.img`
 `;
 
 export const ImageContainer = styled.div`
-  display: flex;
+  ${'' /* display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; */}
+  text-align: center;
   a {
     font-size: 0.5rem;
     &:hover {
@@ -24,21 +23,20 @@ export const ImageContainer = styled.div`
   p {
     font-size: max(20px, 0.4rem);
   }
-`
+`;
 
 export const Controls = styled.div`
-  width: calc( 98vw - 1rem );
   display: flex;
   justify-content: space-between;
   margin-top: 0.5rem;
-`
+`;
 
 export const Description = styled.div`
   margin-top: 1rem;
-  width: calc( 98vw - 1rem );
   display: flex;
-  flex-wrap: wrap
-`
+  flex-wrap: wrap;
+  justify-content: center;
+`;
 
 export const Label = styled.h6`
   font-size: 0.4rem;
@@ -51,4 +49,4 @@ export const Details = styled.h3`
   margin-right: 0.5rem;
   text-align: left;
   font-size: 0.4rem;
-`
+`;

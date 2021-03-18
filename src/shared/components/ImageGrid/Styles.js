@@ -2,8 +2,12 @@ import styled from 'styled-components';
 
 export const StyledGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(2.9rem, 1fr));
-  grid-gap: 0.1rem;
+  grid-template-columns: repeat(auto-fit, minmax(15vw, 1fr));
+  grid-gap: 0.5rem;
+  ${
+    '' /* grid-template-columns: repeat(auto-fit, minmax(2.9rem, 1fr));
+  grid-gap: 0.1rem; */
+  }
   ${'' /* grid-template-rows: repeat(auto-fit, minmax(3rem, 1fr)); */}
 `;
 
