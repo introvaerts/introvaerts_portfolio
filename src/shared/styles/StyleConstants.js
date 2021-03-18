@@ -5,6 +5,8 @@ export const colour = {
   reverse: '#ffffff', //white
   background1: '#ffffff', //white
   background2: '#605d5d', // darker grey for lines, etc
+  theme1: '#a2a0a0;',
+  theme2: '#b51212',
 };
 
 export const font = {
