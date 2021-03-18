@@ -47,3 +47,8 @@ export const Details = styled.h3`
   text-align: left;
   font-size: 0.4rem;
 `;
+
+export const Back = styled.div`
+  margin-bottom: 0.7rem;
+  font-size: 0.5rem;
+`;
