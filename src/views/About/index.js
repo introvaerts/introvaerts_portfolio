@@ -12,8 +12,8 @@ const About = ({ pageTitle, tagLine, aboutImage, description }) => {
         {aboutImage ? <Image src={aboutImage} alt="About Image"/> : null}
         {description ? 
         <>
-          {description.split("\n").map(piece => {
-            return <Paragraph>{piece}</Paragraph>
+          {description.split("\n").map((piece, index) => {
+            return <Paragraph key={index}>{piece}</Paragraph>
 
           })}
         </> : null}

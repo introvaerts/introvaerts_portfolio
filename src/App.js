@@ -8,7 +8,6 @@ import Icon from './shared/components/Icon';
 import Wrapper from './shared/components/Wrapper';
 import Navigator from './shared/components/Navigator';
 import MainRouter from './navigation/MainRouter';
-import Title from './shared/components/Title';
 
 function App() {
   const [subdomain, setSubdomain] = useState();

@@ -1,7 +1,6 @@
 import Api from '../../utils/Api';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom'; 
-import { Title } from './Style';
 import ImageGrid from '../../shared/components/ImageGrid';
 import ViewContainer from '../../shared/components/ViewContainer';
 import SecondaryTitle from '../../shared/components/SecondaryTitle';

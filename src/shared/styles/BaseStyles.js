@@ -24,14 +24,14 @@ export default createGlobalStyle`
   h3 {
     ${font.regular};
     ${font.size(0.875)};
-    margin: 0.875rem 0;
+    margin: 1.8rem 0 1.2rem 0;
+    text-align: center;
   }
 
   h4 {
     ${font.brand};
     ${font.size(1)};
-    margin-bottom: 2rem;
-    color: ${colour.reverse};
+    
   }
 
   p {
