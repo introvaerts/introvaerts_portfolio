@@ -3,8 +3,8 @@ import { colour } from '../../shared/styles/StyleConstants';
 
 export const ImageView = styled.img`
   object-fit: cover;
-  height: 45vh;
-  max-width: calc(99vw - 1rem);
+  max-height: 60vh;
+  max-width: 100%;
 `;
 
 export const ImageContainer = styled.div`
