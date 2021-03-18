@@ -1,6 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { ImageView, ImageContainer, Controls, Label, Details, Description } from './Style';
+import { ImageView, ImageContainer, Controls, Label, Details, Description, Back } from './Style';
 import ViewContainer from '../../shared/components/ViewContainer';
 import SecondaryTitle from '../../shared/components/SecondaryTitle';
 import Api from '../../utils/Api';
@@ -10,6 +10,7 @@ const Image = ({ page_title }) => {
   const [image, setImage] = useState();
   const [nextImage, setNextImage] = useState();
   const [prevImage, setPrevImage] = useState();
+  const [galleryName, setGalleryName] = useState();
 
   useEffect(() => {
     Api.getImage(id)
@@ -22,6 +23,7 @@ const Image = ({ page_title }) => {
   useEffect(() => {
     const getGallery = async () => {
       const thisGallery = (await Api.getGallery(name)).data.data.gallery;
+      setGalleryName(thisGallery.name)
       const index = thisGallery.images.findIndex(image => image === id);
       if (index === thisGallery.images.length - 1) {
         setNextImage(thisGallery.images[0]);
@@ -41,6 +43,9 @@ const Image = ({ page_title }) => {
     <>
       <SecondaryTitle text={page_title} />
       <ViewContainer>
+        <Back>
+          <Link to={`/galleries/${name}`}>{`< back to ${galleryName}`}</Link>
+        </Back>
         <ImageContainer>
           <ImageView src={image?.image_url} alt={image?.alt_text} />
           <Controls>
