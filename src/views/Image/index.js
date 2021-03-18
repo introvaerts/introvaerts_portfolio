@@ -8,7 +8,6 @@ import Api from '../../utils/Api';
 const Image = ({ page_title }) => {
   const { name, id } = useParams();
   const [image, setImage] = useState();
-  const [gallery, setGallery] = useState();
   const [nextImage, setNextImage] = useState();
   const [prevImage, setPrevImage] = useState();
 
@@ -34,7 +33,6 @@ const Image = ({ page_title }) => {
         setNextImage(thisGallery.images[index + 1]);
         setPrevImage(thisGallery.images[index - 1]);
       }
-      setGallery(thisGallery);
     };
     getGallery();
   }, [id, name]);

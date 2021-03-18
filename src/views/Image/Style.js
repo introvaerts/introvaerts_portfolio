@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colour, font } from '../../shared/styles/StyleConstants';
+import { colour } from '../../shared/styles/StyleConstants';
 
 export const ImageView = styled.img`
   object-fit: cover;
@@ -8,9 +8,6 @@ export const ImageView = styled.img`
 `;
 
 export const ImageContainer = styled.div`
-  ${'' /* display: flex;
-  flex-direction: column;
-  align-items: center; */}
   text-align: center;
   a {
     font-size: 0.5rem;

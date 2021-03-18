@@ -4,7 +4,6 @@ export const IconContainer = styled.div`
   position: fixed;
   top: 0.3rem;
   right: 0.5rem;
-  ${'' /* text-wrap: wrap; */}
   z-index: 15;
 `;
 
