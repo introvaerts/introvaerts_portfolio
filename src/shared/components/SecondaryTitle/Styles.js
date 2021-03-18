@@ -7,6 +7,6 @@ export const StyledTitle = styled.h4`
 `;
 
 export const StyledContainer = styled.div`
-  top: 0;
-  left: 0; */}
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
 `;

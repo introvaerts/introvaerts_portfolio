@@ -36,7 +36,7 @@ export default createGlobalStyle`
 
   p {
     ${font.regular};
-    ${font.size(0.65)}
+    ${font.size(0.5)}
   }
 
 
